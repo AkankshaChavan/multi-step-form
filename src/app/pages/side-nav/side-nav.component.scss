@@ -1,0 +1,74 @@
+.side-nav {
+    background: url('../../../assets/images/bg-sidebar-desktop.svg') no-repeat 50% / cover;
+    border-radius: 18px;
+    height: 600px;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.stepsNumberIcon {
+    align-items: center;
+    background-color: #473dff;
+    border: 1px solid #eef1fd;
+    border-radius: 50%;
+    color: #eef1fd;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 42px;
+    justify-content: center;
+    transition: all .3s ease;
+    width: 42px;
+}
+
+.stepsNumberIcon:hover {
+    background-color: #bee1fc6d;
+}
+
+.stepsNumberIcon.active {
+    align-items: center;
+    background-color: #bee1fc;
+    border-color: #bee1fc;
+    border-radius: 50%;
+    color: #052a58;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+}
+
+.stepsNumber {
+    color: #a3a1fe;
+    font-size: .85rem;
+    margin-bottom: 2px;
+}
+
+.stepsName {
+    color: #f9f9ff;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.stepLeftContent ul {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.stepsContent {
+    background-color: #fff;
+    border-radius: 18px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.stepLeftContent ul li {
+    gap: 12px;
+}

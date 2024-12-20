@@ -1,0 +1,46 @@
+.stepsRightContent {
+    padding: 40px 60px;
+}
+
+.stepsHeadingName {
+    color: #052a58;
+    font-weight: 700;
+}
+
+.stepsSubHeading {
+    color: #a3a3ac;
+    font-size: 1rem;
+}
+
+.stepsRightInnerContent {
+    height: 75%;
+}
+
+.personalInfo label.form-label {
+    color: #052a58;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.personalInfo input.form-control {
+    padding: 12px 16px;
+}
+
+.stepsRightBottomContent {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.personalInfo .stepsRightBottomContent {
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background-color: #03295a;
+    border-color: #03295a;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+}

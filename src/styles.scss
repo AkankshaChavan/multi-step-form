@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    src: url('./assets/fonts/Ubuntu-Regular.ttf');
+    font-family: Ubuntu;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Ubuntu, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: Ubuntu;
+    letter-spacing: 1px;
+}
+
+.center {
+    align-items: center;
+    display: flex
+;
+    justify-content: center;
+}
+.stepsContent {
+    background-color: #fff;
+    border-radius: 18px;
+    width: 1000px;
+}
