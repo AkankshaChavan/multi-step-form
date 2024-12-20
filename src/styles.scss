@@ -12,19 +12,41 @@
 }
 
 
-body{
+body {
     font-family: Ubuntu;
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
+    background-color: #eef5ff!important;
 }
 
 .center {
     align-items: center;
-    display: flex
-;
+    display: flex;
     justify-content: center;
 }
+
 .stepsContent {
     background-color: #fff;
     border-radius: 18px;
     width: 1000px;
+}
+
+@media (max-width: 768.5px) {
+
+    .container-md {
+        align-items: normal;
+    }
+
+    .stepsContent {
+        background-color: initial;
+        box-shadow: none !important;
+    }
+
+    .stepsContent>.col-md-4 {
+        height: 25%;
+    }
+
+    .stepsRightContent {
+        height: 75%;
+        padding: 0;
+    }
 }

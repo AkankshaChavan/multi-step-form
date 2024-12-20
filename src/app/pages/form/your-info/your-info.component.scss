@@ -44,3 +44,25 @@
     border-radius: 8px;
     padding: 10px 20px;
 }
+
+@media (max-width: 768.5px) {
+    .stepsRightContent {
+        height: 75%;
+        padding: 0;
+    }
+
+    .stepMiddleContentMobile {
+        background-color: #fff;
+        border-radius: 20px 15px;
+        margin: 0 20px;
+        padding: 20px;
+        position: relative;
+        top: -80px;
+    }
+    
+    .stepsRightBottomContent {
+        background-color: #fff;
+        padding: 20px;
+        width: 100%;
+    }
+}

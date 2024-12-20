@@ -72,3 +72,21 @@
 .stepLeftContent ul li {
     gap: 12px;
 }
+
+@media (max-width: 768.5px) {
+    .side-nav {
+        background: url('../../../assets/images/bg-sidebar-mobile.svg') no-repeat 50% / cover;
+        border-radius: 0;
+        height: 100%;
+        max-width: 100%;
+        min-height: 160px;
+    }
+    .stepLeftContent ul {
+        flex-direction: row;
+        gap: 0;
+        justify-content: center;
+    }
+    .stepsName, .stepsNumber {
+        display: none;
+    }
+}
