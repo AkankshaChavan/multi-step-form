@@ -45,3 +45,17 @@
     height: 21px;
     width: 40px;
 }
+
+@media (max-width: 767.98px) {
+    .planSelectionRadio {
+        gap: 12px;
+    }
+    .planSelectionRadio .cardSelection {
+        align-items: center;
+        flex-direction: row;
+        gap: 16px;
+    }
+    .cardSelectionImg {
+        margin-bottom: 0;
+    }
+}
