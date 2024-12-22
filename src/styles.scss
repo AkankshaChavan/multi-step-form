@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    src: url('./assets/fonts/Ubuntu-Regular.ttf');
+    font-family: Ubuntu;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Ubuntu, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Ubuntu;
+    // letter-spacing: 1px;
+    background-color: #eef5ff !important;
+}
+
+.center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.stepsContent {
+    background-color: #fff;
+    border-radius: 18px;
+    width: 1000px;
+}
+
+
+.stepsRightInnerContent {
+    height: 75%;
+}
+
+
+.stepsRightContent {
+    padding: 40px 60px!important;
+}
+
+.stepsHeadingName {
+    color: #052a58;
+    font-weight: 700;
+}
+
+.stepsSubHeading {
+    color: #a3a3ac;
+    font-size: 1rem;
+}
+
+.personalInfo label.form-label {
+    color: #052a58;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.personalInfo input.form-control {
+    padding: 12px 16px;
+}
+
+.stepsRightBottomContent {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.personalInfo .stepsRightBottomContent {
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background-color: #03295a!important;
+    border-color: #03295a!important;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.cardSelection {
+    align-items: flex- !important;
+    border: 1px solid #e4e4e5 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 16px !important;
+}
+
+.cardSelectionImg {
+    width: 40px;
+    margin-bottom: 40px;
+}
+
+.cardSelectionHeader {
+    color: #273d5b;
+    font-weight: 700;
+}
+
+.cardSelectionPrice {
+    color: #b4b4be;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.cardSelectionYearlyDiscount {
+    color: #293445;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.monthyYearlyToggle {
+    align-items: center;
+    background-color: #f8f9fe;
+    border-radius: 10px;
+    display: flex;
+    gap: 1.5rem;
+    height: 56px;
+    justify-content: center;
+}
+.toggleText {
+    color: #9898a2;
+    font-weight: 700;
+}
+.form-switch .form-check-input {
+    height: 21px;
+    width: 40px;
+}
+
+
+@media (max-width: 768.5px) {
+
+    .container-md {
+        align-items: normal;
+    }
+
+    .stepsContent {
+        background-color: initial;
+        box-shadow: none !important;
+    }
+
+    .stepsContent>.col-md-4 {
+        height: 25%;
+    }
+
+    .stepsRightContent {
+        height: 75%;
+        padding: 0 !important;
+    }
+
+
+    .stepMiddleContentMobile {
+        background-color: #fff;
+        border-radius: 20px 15px;
+        margin: 0 20px;
+        padding: 20px;
+        position: relative;
+        top: -80px;
+    }
+
+    .stepsRightBottomContent {
+        background-color: #fff;
+        padding: 20px;
+        width: 100%;
+    }
+}
