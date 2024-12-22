@@ -1,0 +1,46 @@
+.addOns{
+    height: 100%;
+}
+
+.addOns .stepsRightInnerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.addsOnsCards,
+.addsOnsCards label.form-check-label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+}
+.addsOnsCards {
+    border: 1px solid #b4b4be;
+    border-radius: 10px;
+    gap: 2rem;
+    padding: 20px;
+}
+.addOnsCardsHeading {
+    color: #03295a;
+    font-weight: 700;
+}
+.addOnsCardsSubHeading {
+    color: #9898a2;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.addsOnsCards .form-check-input {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+}
+.addsOnsCards label.form-check-label {
+    justify-content: space-between;
+}
+.addOnsCardPrice {
+    color: #483eff;
+    font-size: .9rem;
+    font-weight: 500;
+}

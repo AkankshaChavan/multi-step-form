@@ -15,7 +15,7 @@
 body {
     font-family: Ubuntu;
     // letter-spacing: 1px;
-    background-color: #eef5ff!important;
+    background-color: #eef5ff !important;
 }
 
 .center {
@@ -28,6 +28,30 @@ body {
     background-color: #fff;
     border-radius: 18px;
     width: 1000px;
+}
+
+.stepsRightContent {
+    padding: 40px 60px !important;
+}
+
+.stepsRightBottomContent {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background-color: #03295a !important;
+    border-color: #03295a !important;
+}
+.txtDark {
+    color: #03295a;
+}
+.fs-7 {
+    font-size: .9rem;
+}
+.txtPurple {
+    color: #483eff;
 }
 
 @media (max-width: 768.5px) {
@@ -48,5 +72,19 @@ body {
     .stepsRightContent {
         height: 75%;
         padding: 0;
+    }
+    .stepMiddleContentMobile {
+        background-color: #fff;
+        border-radius: 20px 15px;
+        margin: 0 20px;
+        padding: 20px;
+        position: relative;
+        top: -155px;
+    }
+
+    .stepsRightBottomContent {
+        background-color: #fff;
+        padding: 20px;
+        width: 100%;
     }
 }
