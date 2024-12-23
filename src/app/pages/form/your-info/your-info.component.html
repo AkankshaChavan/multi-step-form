@@ -1,19 +1,31 @@
 <div class="personalInfo">
-    <form action="#" class="d-flex flex-column justify-content-between h-100">
+    <form action="#" class="d-flex flex-column justify-content-between h-100" [formGroup]="firstForm" (ngSubmit)="onSubmit()">
         <div class="stepMiddleContentMobile">
             <div class="stepRightTopContent mb-4">
                 <h2 class="stepsHeadingName">Personal info</h2>
                 <p class="stepsSubHeading">Please provide your name, email address, and phone number</p>
             </div>
             <div class="stepsRightInnerContent">
-                <div class="mb-3"><label for="name" class="form-label">Name</label><input name="name" type="text"
-                        class="form-control " id="name" placeholder="e.g. Akanksha Chavan" value=""></div>
-                <div class="mb-3"><label for="email" class="form-label">Email Address</label><input name="email"
-                        type="text" class="form-control " id="email" placeholder="e.g. akanksha.chavan@gmail.com" value="">
+                <div class="mb-3"><label for="name" class="form-label">Name</label>
+                    <input formControlName="name" name="name" type="text" class="form-control " id="name" placeholder="e.g. Akanksha Chavan" value="">
+                    <div *ngIf="submitted && firstForm.get('name')?.errors && firstForm.get('name')?.touched">
+                        <small *ngIf="firstForm.get('name')?.errors?.['required']">Name is required</small>
+                    </div>
+                    </div>
+                <div class="mb-3"><label for="email" class="form-label">Email Address</label>
+                    <input formControlName="email" name="email" type="text" class="form-control " id="email" placeholder="e.g. akanksha.chavan@gmail.com" value="">
+                    <div *ngIf="firstForm.get('email')?.invalid && firstForm.get('email')?.touched">
+                        <small *ngIf="firstForm.get('email')?.errors?.['required']">Email is required</small>
+                        <small *ngIf="firstForm.get('email')?.errors?.['email']">Invalid email address format</small>
+                    </div>
                 </div>
-                <div class="mb-3"><label for="phoneNumber" class="form-label">Phone Number</label><input
-                        name="phoneNumber" type="number" class="form-control " id="phoneNumber"
-                        placeholder="e.g. +1 234 567 890" value=""></div>
+                <div class="mb-3"><label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input formControlName="phone" name="phoneNumber" type="" class="form-control " id="phoneNumber" placeholder="e.g. +1 234 567 890" value="">
+                    <div *ngIf="firstForm.get('phone')?.invalid && firstForm.get('phone')?.touched">
+                        <small *ngIf="firstForm.get('phone')?.errors?.['required']">Phone number is required</small>
+                        <small *ngIf="firstForm.get('phone')?.errors?.['pattern']">Phone number is not valid</small>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="stepsRightBottomContent mt-5"><button type="submit" class="btn btn-primary">Next Step</button></div>
