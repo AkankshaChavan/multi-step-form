@@ -1,50 +1,140 @@
 <div class="selectPlan">
-    <form action="#" class="d-flex flex-column justify-content-between h-100">
+    <form action="#" class="d-flex flex-column justify-content-between h-100" [formGroup]="secondForm" (ngSubmit)="onSubmit()">
         <div class="stepMiddleContentMobile">
             <div class="stepRightTopContent mb-4">
                 <h2 class="stepsHeadingName">Select your plan</h2>
                 <p class="stepsSubHeading">You have the option of monthly or yearly billing.</p>
             </div>
             <div class="stepsRightInnerContent">
+
                 <div class="planSelectionRadio row mb-5">
-                    <div class="col-md-4 col-sm-12"><input name="plan" type="radio" class="btn-check"
-                            id="btn-check-outlined" autocomplete="off" value="1"><label class="btn cardSelection"
+                    <div class="col-md-4 col-sm-12">
+                      <input
+                        name="plan"
+                        type="radio"
+                        class="btn-check"
+                        formControlName="plan"
+                        id="btn-check-outlined"
+                        autocomplete="off"
+                        value="1"
+                      />
+                      <label class="btn cardSelection" for="btn-check-outlined">
+                        <img class="cardSelectionImg" src="../../../../assets/images/icon-arcade.svg" alt="arcadeIcon" />
+                        <div class="text-start">
+                          <p class="cardSelectionHeader mb-0">Arcade</p>
+                          <p class="cardSelectionPrice mb-0">${{ labels[0] }}/mo</p>
+                          <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
+                        </div>
+                      </label>
+                    </div>
+                  
+                    <div class="col-md-4 col-sm-12">
+                      <input
+                        name="plan"
+                        type="radio"
+                        class="btn-check"
+                        formControlName="plan"
+                        id="btn-check-outlined2"
+                        autocomplete="off"
+                        value="2"
+                      />
+                      <label class="btn cardSelection" for="btn-check-outlined2">
+                        <img class="cardSelectionImg" src="../../../../assets/images/icon-advanced.svg" alt="advanceIcon" />
+                        <div class="text-start">
+                          <p class="cardSelectionHeader mb-0">Advanced</p>
+                          <p class="cardSelectionPrice mb-0">${{ labels[1] }}/mo</p>
+                          <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
+                        </div>
+                      </label>
+                    </div>
+                  
+                    <div class="col-md-4 col-sm-12">
+                      <input
+                        name="plan"
+                        type="radio"
+                        class="btn-check"
+                        formControlName="plan"
+                        id="btn-check-outlined3"
+                        autocomplete="off"
+                        value="3"
+                      />
+                      <label class="btn cardSelection" for="btn-check-outlined3">
+                        <img class="cardSelectionImg" src="../../../../assets/images/icon-pro.svg" alt="proIcon" />
+                        <div class="text-start">
+                          <p class="cardSelectionHeader mb-0">Pro</p>
+                          <p class="cardSelectionPrice mb-0">${{ labels[2] }}/mo</p>
+                          <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="monthyYearlyToggle">
+                    <p class="toggleText mb-0">Monthly</p>
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input customToggle"
+                        type="checkbox"
+                        [(ngModel)]="isToggled"
+                        [ngModelOptions]="{ standalone: true }"
+                        role="switch"
+                        id="flexSwitchCheckDefault"
+                      />
+                    </div>
+                    <p class="toggleText mb-0">Yearly</p>
+                  </div>
+                  
+
+                <!-- <div class="planSelectionRadio row mb-5">
+                    <div class="col-md-4 col-sm-12">
+                        <input name="plan" type="radio" class="btn-check" formControlName="plan" checked=""
+                            id="btn-check-outlined" autocomplete="off" value="1">
+                            <label class="btn cardSelection"
                             for="btn-check-outlined"><img class="cardSelectionImg"
                                 src="../../../../assets/images/icon-arcade.svg" alt="arcadeIcon">
                             <div class="text-start">
                                 <p class="cardSelectionHeader mb-0">Arcade</p>
-                                <p class="cardSelectionPrice mb-0">$9/mo</p>
-                                <p class="cardSelectionYearlyDiscount mb-0"></p>
+                                <p class="cardSelectionPrice mb-0">{{ labels[0] }}</p>
+                                <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
                             </div>
-                        </label></div>
-                    <div class="col-md-4 col-sm-12"><input name="plan" type="radio" class="btn-check"
-                            id="btn-check-outlined2" autocomplete="off" value="2"><label class="btn cardSelection"
+                        </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input name="plan" type="radio" class="btn-check" formControlName="plan"
+                            id="btn-check-outlined2" autocomplete="off" value="2">
+                            <label class="btn cardSelection"
                             for="btn-check-outlined2"><img class="cardSelectionImg"
                                 src="../../../../assets/images/icon-advanced.svg"
                                 alt="advanceIcon">
                             <div class="text-start">
                                 <p class="cardSelectionHeader mb-0">Advanced</p>
-                                <p class="cardSelectionPrice mb-0">$12/mo</p>
-                                <p class="cardSelectionYearlyDiscount mb-0"></p>
+                                <p class="cardSelectionPrice mb-0">{{ labels[1] }}</p>
+                                <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
                             </div>
-                        </label></div>
-                    <div class="col-md-4 col-sm-12"><input name="plan" type="radio" class="btn-check"
-                            id="btn-check-outlined3" autocomplete="off" value="3"><label class="btn cardSelection"
+                        </label>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input name="plan" type="radio" class="btn-check" formControlName="plan"
+                            id="btn-check-outlined3" autocomplete="off" value="3">
+                            <label class="btn cardSelection"
                             for="btn-check-outlined3"><img class="cardSelectionImg"
                                 src="../../../../assets/images/icon-pro.svg" alt="proIcon">
                             <div class="text-start">
                                 <p class="cardSelectionHeader mb-0">Pro</p>
-                                <p class="cardSelectionPrice mb-0">$15/mo</p>
-                                <p class="cardSelectionYearlyDiscount mb-0"></p>
+                                <p class="cardSelectionPrice mb-0">{{ labels[2] }}</p>
+                                <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
                             </div>
-                        </label></div>
+                        </label>
+                    </div>
                 </div>
+
                 <div class="monthyYearlyToggle">
                     <p class="toggleText mb-0">Monthly</p>
-                    <div class="form-check form-switch"><input class="form-check-input customToggle" type="checkbox"
+                    <div class="form-check form-switch">
+                        <input class="form-check-input customToggle" type="checkbox" [(ngModel)]="isToggled" [ngModelOptions]="{ standalone: true }"
                             role="switch" id="flexSwitchCheckDefault"></div>
                     <p class="toggleText mb-0">Yearly</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="stepsRightBottomContent mt-5"><a class="btn border-0 text-black-50 fw-bold" href="/">Go
