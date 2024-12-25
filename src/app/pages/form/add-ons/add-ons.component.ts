@@ -15,12 +15,21 @@ export class AddOnsComponent implements OnInit{
 
   username: string | null = null;
 
-  period : any;
+  period : string = '';
 
   ngOnInit() {
 
-    this.username = localStorage.getItem('name');
-    console.log('Username:', this.username);
+      const userPeriod = this.storageService.getItem('billingCycle');
+
+
+      if (userPeriod == "Monthly") {
+
+        this.period = "Mothly";
+        console.log('Monthly');
+        
+      } else {
+        console.log('Not working');
+      }
     
   }
 
@@ -33,7 +42,6 @@ export class AddOnsComponent implements OnInit{
       add: new FormControl('')
     });
 
-    this.period = storageService.getItem('billingCycle');
   }
 
 
