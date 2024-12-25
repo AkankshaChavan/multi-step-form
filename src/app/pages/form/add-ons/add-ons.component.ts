@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { StorageService } from '../../../storage.service';
 
 @Component({
   selector: 'app-add-ons',
@@ -19,13 +18,15 @@ export class AddOnsComponent implements OnInit{
 
   ngOnInit() {
 
-      const userPeriod = this.storageService.getItem('billingCycle');
+      const userPeriod = localStorage.getItem('billingCycle');
+
+      console.log(userPeriod);
 
 
-      if (userPeriod == "Monthly") {
+      if (userPeriod === "Monthly") {
 
-        this.period = "Mothly";
-        console.log('Monthly');
+        this.period = "Monthly";
+        console.log(this.period);
         
       } else {
         console.log('Not working');
@@ -37,7 +38,7 @@ export class AddOnsComponent implements OnInit{
 
   labels = [1, 2, 2];
   thirdForm: FormGroup;
-  constructor(private router: Router, private storageService : StorageService) {
+  constructor(private router: Router) {
     this.thirdForm = new FormGroup({
       add: new FormControl('')
     });
