@@ -32,7 +32,6 @@ export class YourInfoComponent {
     if (this.firstForm.valid) {
 
       this.success = true;
-      this.submitted = false;
 
       console.log('Form submitted!');
 
@@ -42,12 +41,13 @@ export class YourInfoComponent {
         email: formValues.email,
         phone: formValues.phone
       }
-
-      // localStorage.setItem('formData', JSON.stringify(formData));
       localStorage.setItem('name', JSON.stringify(formData.name));
       localStorage.setItem('email', JSON.stringify(formData.email));
       localStorage.setItem('phone', JSON.stringify(formData.phone));
       this.router.navigate(['select-plans']);
+      
+      this.firstForm.reset();
+      this.submitted = false;
     }
     else {
       this.success = false;

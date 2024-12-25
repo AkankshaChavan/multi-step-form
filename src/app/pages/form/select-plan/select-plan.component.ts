@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-select-plan',
   standalone: true,
@@ -15,7 +16,7 @@ export class SelectPlanComponent {
 
   secondForm: FormGroup;
 
-  constructor(private router: Router) {
+  constructor(private router: Router ) {
     this.secondForm = new FormGroup({
       plan: new FormControl('', Validators.required),
     });
@@ -26,9 +27,19 @@ export class SelectPlanComponent {
   defaultLabels = [9, 12, 15];
   toggledLabels = [90, 120, 150];
 
+  
+
   get labels() {
     return this.isToggled ? this.toggledLabels : this.defaultLabels;
   }
+
+  month = "mo";
+  year = "yr";
+
+  get period(){
+    return this.isToggled ? this.year : this.month;
+  }
+
 
   onSubmit() {
     if (this.secondForm.valid) {

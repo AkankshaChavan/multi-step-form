@@ -22,7 +22,7 @@
                         <img class="cardSelectionImg" src="../../../../assets/images/icon-arcade.svg" alt="arcadeIcon" />
                         <div class="text-start">
                           <p class="cardSelectionHeader mb-0">Arcade</p>
-                          <p class="cardSelectionPrice mb-0">${{ labels[0] }}/mo</p>
+                          <p class="cardSelectionPrice mb-0">${{ labels[0] }} / {{period}}</p>
                           <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
                         </div>
                       </label>
@@ -42,7 +42,7 @@
                         <img class="cardSelectionImg" src="../../../../assets/images/icon-advanced.svg" alt="advanceIcon" />
                         <div class="text-start">
                           <p class="cardSelectionHeader mb-0">Advanced</p>
-                          <p class="cardSelectionPrice mb-0">${{ labels[1] }}/mo</p>
+                          <p class="cardSelectionPrice mb-0">${{ labels[1] }} / {{period}}</p>
                           <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
                         </div>
                       </label>
@@ -62,7 +62,7 @@
                         <img class="cardSelectionImg" src="../../../../assets/images/icon-pro.svg" alt="proIcon" />
                         <div class="text-start">
                           <p class="cardSelectionHeader mb-0">Pro</p>
-                          <p class="cardSelectionPrice mb-0">${{ labels[2] }}/mo</p>
+                          <p class="cardSelectionPrice mb-0">${{ labels[2] }} / {{ period }}</p>
                           <p class="cardSelectionYearlyDiscount mb-0" *ngIf="isToggled">2 months free</p>
                         </div>
                       </label>
