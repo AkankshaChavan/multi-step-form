@@ -7,7 +7,7 @@ import { ThankYouComponent } from './pages/form/thank-you/thank-you.component';
 
 export const routes: Routes = [
     { path: 'your-info', component: YourInfoComponent },
-    { path: 'select-plans', component: SelectPlanComponent},
+    { path: 'select-plan', component: SelectPlanComponent},
     { path: 'add-ons', component: AddOnsComponent},
     { path: 'summary', component: SummaryComponent},
     { path: 'thank-you', component: ThankYouComponent},

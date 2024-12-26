@@ -9,19 +9,19 @@
                 <div class="summaryContent">
                     <div class="summaryContentRow border-bottom">
                         <div class="summaryContentLeft">
-                            <h5 class="fs-6 fw-bold txtDark">Arcade (Monthly)</h5>
-                            <p class="text-decoration-underline"><a class="" href="/selectyourplan">Change</a></p>
+                            <h5 class="fs-6 fw-bold txtDark">{{ plan }} ({{ planPeriod }})</h5>
+                            <p class="text-decoration-underline"><a class="" href="select-plan">Change</a></p>
                         </div>
                         <div class="summaryContentRight">
-                            <h5 class="fs-6 fw-bold txtDark">$9/mo</h5>
+                            <h5 class="fs-6 fw-bold txtDark">${{ planPrice }}/{{ period }}</h5>
                         </div>
                     </div>
-                    <div class="summaryContentRow mt-3">
+                    <div class="summaryContentRow mt-3" *ngFor="let addOn of addOns">
                         <div class="summaryContentLeft">
-                            <p class="mb-0">Online service</p>
+                            <p class="mb-0">{{ addOn.title }}</p>
                         </div>
                         <div class="summaryContentRight">
-                            <h5 class="fs-7">+$1/mo</h5>
+                            <h5 class="fs-7">+${{ addOn.price }}/{{ period }}</h5>
                         </div>
                     </div>
                 </div>
@@ -30,12 +30,12 @@
                         <p class="mb-0">Total (per year)</p>
                     </div>
                     <div class="summaryContentRight">
-                        <h5 class="fw-bold txtPurple mb-0">$10/mo</h5>
+                        <h5 class="fw-bold txtPurple mb-0">${{ totalSum }}/{{ period }}</h5>
                     </div>
                 </div>
             </div>
         </div>
         <div class="stepsRightBottomContent mt-5"><a class="btn border-0 text-black-50 fw-bold" href="/add-ons">Go
-                Back</a><button class="btn btn-primary">Confirm</button></div>
+                Back</a><a href="/thank-you" class="btn btn-primary">Confirm</a></div>
     </form>
 </div>

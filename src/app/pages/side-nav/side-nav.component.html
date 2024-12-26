@@ -3,7 +3,7 @@
         <ul>
             <li class="row">
                 <div class="col-3">
-                    <div class="stepsNumberIcon active">1</div>
+                    <a class="stepsNumberIcon"  routerLink="/your-info" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">1</a>
                 </div>
                 <div class="col-8">
                     <div class="stepsNumber">STEP 1</div>
@@ -12,7 +12,7 @@
             </li>
             <li class="row">
                 <div class="col-3">
-                    <div class="stepsNumberIcon">2</div>
+                    <a class="stepsNumberIcon"  routerLink="/select-plan" routerLinkActive="active">2</a>
                 </div>
                 <div class="col-8">
                     <div class="stepsNumber">STEP 2</div>
@@ -21,7 +21,7 @@
             </li>
             <li class="row">
                 <div class="col-3">
-                    <div class="stepsNumberIcon">3</div>
+                    <a class="stepsNumberIcon" routerLink="/add-ons" routerLinkActive="active">3</a>
                 </div>
                 <div class="col-8">
                     <div class="stepsNumber">STEP 3</div>
@@ -30,7 +30,7 @@
             </li>
             <li class="row">
                 <div class="col-3">
-                    <div class="stepsNumberIcon">4</div>
+                    <a class="stepsNumberIcon" routerLink="/summary" routerLinkActive="active">4</a>
                 </div>
                 <div class="col-8">
                     <div class="stepsNumber">STEP 4</div>

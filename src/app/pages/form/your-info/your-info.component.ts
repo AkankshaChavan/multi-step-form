@@ -44,7 +44,7 @@ export class YourInfoComponent {
       localStorage.setItem('name', JSON.stringify(formData.name));
       localStorage.setItem('email', JSON.stringify(formData.email));
       localStorage.setItem('phone', JSON.stringify(formData.phone));
-      this.router.navigate(['select-plans']);
+      this.router.navigate(['select-plan']);
       
       this.firstForm.reset();
       this.submitted = false;
