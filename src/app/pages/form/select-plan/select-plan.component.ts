@@ -22,7 +22,7 @@ export class SelectPlanComponent {
     });
   }
 
-  isToggled: boolean = false;
+  isToggled: boolean = true;
 
   defaultLabels = [9, 12, 15];
   toggledLabels = [90, 120, 150];
@@ -61,7 +61,7 @@ export class SelectPlanComponent {
       localStorage.setItem('price', JSON.stringify(selectedPlan.price));
       localStorage.setItem('billingCycle', JSON.stringify(selectedPlan.billingCycle));
 
-
+      this.secondForm.reset();
       this.router.navigate(['add-ons']);
     } else {
       console.log('Plan not selected');

@@ -84,6 +84,7 @@ export class AddOnsComponent implements OnInit {
         localStorage.setItem('selectedAddOns', JSON.stringify(selectedAddOns));
       }
 
+      this.thirdForm.reset();
       this.router.navigate(['/summary']);
     } else {
       console.log('Form is not valid');

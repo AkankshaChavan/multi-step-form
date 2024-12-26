@@ -15,46 +15,62 @@
     flex-direction: column;
     padding: 16px;
 }
+
 .cardSelectionImg {
     margin-bottom: 40px;
 }
+
 .cardSelectionHeader {
     color: #273d5b;
     font-weight: 700;
 }
+
 .cardSelectionPrice {
     color: #b4b4be;
     font-size: .95rem;
     font-weight: 500;
 }
+
 .monthyYearlyToggle {
     align-items: center;
     background-color: #f8f9fe;
     border-radius: 10px;
-    display: flex
-;
+    display: flex;
     gap: 1.5rem;
     height: 56px;
     justify-content: center;
 }
+
 .toggleText {
     color: #9898a2;
     font-weight: 700;
 }
+
 .form-switch .form-check-input {
     height: 21px;
     width: 40px;
+}
+
+.cardSelection:hover{
+    border-color: #473dff;
+}
+
+.btn-check:checked+.btn.cardSelection {
+    background-color: #f8f9fe;
+    border: 1px solid #483eff;
 }
 
 @media (max-width: 767.98px) {
     .planSelectionRadio {
         gap: 12px;
     }
+
     .planSelectionRadio .cardSelection {
         align-items: center;
         flex-direction: row;
         gap: 16px;
     }
+
     .cardSelectionImg {
         margin-bottom: 0;
     }

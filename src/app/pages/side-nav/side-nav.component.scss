@@ -23,6 +23,7 @@
     justify-content: center;
     transition: all .3s ease;
     width: 42px;
+    pointer-events: none;
 }
 
 .stepsNumberIcon:hover {
@@ -31,6 +32,7 @@
 
 .stepsNumberIcon.active {
     align-items: center;
+    text-decoration: none;
     background-color: #bee1fc;
     border-color: #bee1fc;
     border-radius: 50%;
