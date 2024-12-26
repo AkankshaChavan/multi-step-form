@@ -20,9 +20,9 @@
                         </div>
                     </label>
                 </div>
-                <div class="form-check addsOnsCards ">
+                <div class="form-check addsOnsCards " [ngClass]="isChecked ? 'active' : ''">
                     <input name="largerStorageCheck" class="form-check-input ms-0" formControlName="add" type="checkbox"
-                        id="largerStorageCheck" value="">
+                        id="largerStorageCheck" value="" [(ngModel)]="isChecked">
                     <label class="form-check-label" for="largerStorageCheck">
                         <div class="addOnsCardContent">
                             <p class="addOnsCardsHeading mb-0">Larger storage</p>

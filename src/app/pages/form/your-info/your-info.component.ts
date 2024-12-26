@@ -25,6 +25,13 @@ export class YourInfoComponent {
     });
   }
 
+  allowOnlyNumbers(event: KeyboardEvent): void {
+    const charCode = event.key.charCodeAt(0);
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
+    }
+  }
+
 
   onSubmit() {
     this.submitted = true;

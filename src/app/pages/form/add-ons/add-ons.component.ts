@@ -18,7 +18,9 @@ export class AddOnsComponent implements OnInit {
   monthlyAddOnsPrice = [1, 2, 2];
   yearlyAddOnsPrice = [10, 20, 20];
 
-  // const plan = localStorage.getItem('');
+  // const plan = localStorage .getItem('');
+
+  isChecked = false;
 
   ngOnInit() {
     const userPeriod = localStorage.getItem('billingCycle');
