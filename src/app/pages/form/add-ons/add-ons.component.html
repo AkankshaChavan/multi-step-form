@@ -7,9 +7,9 @@
                 <p class="stepsSubHeading">Add-ons help enhance your gaming experience.</p>
             </div>
             <div class="stepsRightInnerContent">
-                <div class="form-check addsOnsCards ">
+                <div class="form-check addsOnsCards" [ngClass]="isChecked ? 'active' : ''">
                     <input name="onlineServiceCheck" class="form-check-input ms-0" formControlName="add" type="checkbox"
-                        id="onlineServiceCheck" value="">
+                        id="onlineServiceCheck" value="" [(ngModel)]="isChecked">
                     <label class="form-check-label" for="onlineServiceCheck">
                         <div class="addOnsCardContent">
                             <p class="addOnsCardsHeading mb-0">Online service</p>
@@ -33,14 +33,15 @@
                         </div>
                     </label>
                 </div>
-                <div class="form-check addsOnsCards ">
+                <div class="form-check addsOnsCards" [ngClass]="isChecked ? 'active' : ''">
                     <input name="customizableProfileCheck" formControlName="add" class="form-check-input ms-0"
-                        type="checkbox" id="customizableProfileCheck" value="">
+                        type="checkbox" id="customizableProfileCheck" value="" [(ngModel)]="isChecked">
                     <label class="form-check-label" for="customizableProfileCheck">
                         <div class="addOnsCardContent">
                             <p class="addOnsCardsHeading mb-0">Customizable profile</p>
                             <p class="addOnsCardsSubHeading mb-0">Custom theme on your profile</p>
                         </div>
+                        
                         <div class="addOnsCardPrice">
                             <p class="mb-0">+${{addOnsPrice[2]}}/{{period}}</p>
                         </div>
